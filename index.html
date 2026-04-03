@@ -582,6 +582,36 @@
     footer p { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
     footer .footer-name { color: var(--gold); font-weight: 600; }
 
+    /* ── MORE VIDEOS ── */
+    #more-videos {
+      background: var(--dark2);
+      padding: 40px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      border-top: 1px solid rgba(240,165,0,0.1);
+      border-bottom: 1px solid rgba(240,165,0,0.1);
+    }
+    #more-videos p {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gray);
+    }
+    .btn-more {
+      padding: 12px 28px;
+      background: transparent;
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 0.88rem;
+      border: 1.5px solid var(--gold);
+      border-radius: 4px;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-more:hover { background: var(--gold); color: var(--dark); }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       #hero, #about, #philosophy, #contact { grid-template-columns: 1fr; }
@@ -833,6 +863,12 @@
       </div>
     </div>
   </section>
+
+  <!-- MORE VIDEOS -->
+  <div id="more-videos">
+    <p>Want to see more?</p>
+    <a href="https://drive.google.com/drive/folders/1tZSpeuCGKWdKxxy1hvrAe5Lwaa8JzdD4?usp=drive_link" target="_blank" class="btn-more">Watch More Videos</a>
+  </div>
 
   <!-- PAID CAMPAIGNS -->
   <section id="paid">
