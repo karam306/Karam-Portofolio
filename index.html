@@ -1189,12 +1189,12 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 1100px) {
-      #hero { grid-template-columns: 1fr; }
+      #hero { grid-template-columns: 1fr; padding: 0 40px 80px; }
       .hero-right { display: none; }
-      #about { grid-template-columns: 1fr; gap: 60px; }
+      #about { grid-template-columns: 1fr; gap: 60px; padding: 80px 40px; }
       .about-left { position: static; }
       .process-grid { grid-template-columns: repeat(2, 1fr); }
-      .toolkit-grid { grid-template-columns: repeat(2, 1fr); }
+      .toolkit-grid { grid-template-columns: repeat(2, 1fr); max-height: none; }
       .organic-grid { grid-template-columns: repeat(2, 1fr); }
       .organic-card:first-child { grid-row: auto; }
       .paid-grid { grid-template-columns: 1fr; gap: 2px; }
@@ -1205,26 +1205,79 @@
     }
 
     @media (max-width: 768px) {
-      nav { padding: 16px 24px; }
-      nav.scrolled { padding: 12px 24px; }
+      /* ── NAV ── */
+      nav { padding: 16px 20px; }
+      nav.scrolled { padding: 12px 20px; }
       .nav-links { display: none; }
       .nav-hamburger { display: flex; }
-      #hero { padding: 0 24px 60px; min-height: 100svh; }
-      .hero-name { font-size: clamp(4rem, 18vw, 8rem); }
-      #about, #process, #toolkit, #organic, #paid, #services, #philosophy, #contact { padding: 80px 24px; }
-      .process-header, .organic-header, .paid-header { grid-template-columns: 1fr; gap: 24px; }
-      .process-grid { grid-template-columns: 1fr; }
-      .toolkit-grid { grid-template-columns: 1fr; }
-      .organic-grid { grid-template-columns: 1fr; }
-      .paid-card { padding: 36px 24px; }
-      footer {
-      position: relative;
-      z-index: 1; flex-direction: column; gap: 16px; text-align: center; padding: 28px 24px; }
-      .footer-links { flex-wrap: wrap; justify-content: center; }
-      .contact-bg-text { display: none; }
+
+      /* ── CURSOR ── */
       body { cursor: auto; }
       #cursor-dot, #cursor-ring { display: none; }
-      .btn-primary, .btn-ghost, .nav-cta, .form-submit, .form-input, .contact-row, .service-item, .organic-card { cursor: auto; }
+      .btn-primary, .btn-ghost, .nav-cta, .form-submit, .form-input,
+      .contact-row, .service-item, .organic-card { cursor: auto; }
+
+      /* ── HERO ── */
+      #hero { padding: 100px 20px 60px; min-height: 100svh; }
+      .hero-name { font-size: clamp(3.5rem, 16vw, 7rem); line-height: 0.9; }
+      .hero-tagline { font-size: 0.9rem; }
+      .hero-tags { flex-wrap: wrap; gap: 8px; }
+      .hero-tag { font-size: 0.68rem; padding: 6px 14px; }
+      .hero-actions { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .btn-primary, .btn-ghost { width: 100%; text-align: center; justify-content: center; }
+
+      /* Hide floating badges — they overlap hero text on mobile */
+      .float-badge { display: none; }
+
+      /* ── SECTIONS ── */
+      #about, #process, #toolkit, #organic, #paid, #services, #philosophy, #contact {
+        padding: 70px 20px;
+      }
+      #watch-more { padding: 60px 20px !important; }
+
+      /* ── TYPOGRAPHY ── */
+      .section-title { font-size: clamp(2.2rem, 9vw, 3.5rem); }
+      .about-headline { font-size: clamp(2.5rem, 11vw, 4rem); }
+      .philosophy-quote { font-size: clamp(1.6rem, 6vw, 2.5rem); }
+      .section-desc { font-size: 0.88rem; }
+
+      /* ── GRIDS → SINGLE COLUMN ── */
+      .process-header, .organic-header, .paid-header { grid-template-columns: 1fr; gap: 20px; }
+      .process-grid { grid-template-columns: 1fr; }
+      .toolkit-grid { grid-template-columns: 1fr; max-height: none; }
+      .organic-grid { grid-template-columns: 1fr; }
+      .paid-grid { grid-template-columns: 1fr; }
+      .paid-card { padding: 32px 20px; }
+      .paid-stats-row { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .paid-screenshots-strip { grid-template-columns: 1fr; gap: 8px; }
+      .services-layout { grid-template-columns: 1fr; gap: 32px; }
+      .services-left { position: static; }
+
+      /* ── ABOUT ── */
+      #about { grid-template-columns: 1fr; gap: 48px; }
+      .about-left { position: static; }
+      .about-quote { font-size: 1rem; padding: 14px 20px; }
+
+      /* ── CONTACT ── */
+      .contact-layout { grid-template-columns: 1fr; gap: 48px; }
+      .contact-bg-text { display: none; }
+      .contact-row { padding: 16px; }
+      .contact-row-value { font-size: 0.85rem; }
+
+      /* ── FOOTER ── */
+      footer { position: relative; z-index: 1; flex-direction: column; gap: 14px; text-align: center; padding: 28px 20px; }
+      .footer-links { flex-wrap: wrap; justify-content: center; }
+
+      /* ── PROCESS CARDS ── */
+      .process-card { padding: 28px 20px; }
+      .process-num { font-size: 2.5rem; }
+
+      /* ── PHILOSOPHY ── */
+      .philosophy-beliefs { gap: 8px; }
+      .belief-pill { font-size: 0.75rem; padding: 8px 16px; }
+
+      /* ── SECTION BG TEXT ── */
+      .section-bg-text { font-size: clamp(4rem, 12vw, 9rem); }
     }
 
     /* ── THREE.JS CANVAS ── */
